@@ -9,15 +9,22 @@ public class PlayerManager : MonoBehaviour
 
     public void Setup()
     {
-        int layer = 6 + GameObject.FindObjectOfType<PlayerInputManager>().playerCount;
+        int pcount = 0;
+        foreach (PlayerInput pi in PlayerInput.all)
+        {
+            pcount++;
+        }
+        Debug.Log(pcount);
+        int layer = 5 + pcount;
+        Debug.Log(layer);
         virtualCam.layer = layer;
-        var bitMask = (1 << layer)
-            | (1 << 0)
+        var bitMask = (1 << 0)
             | (1 << 1)
             | (1 << 2)
             | (1 << 3)
             | (1 << 4)
-            | (1 << 5);
+            | (1 << 5)
+            | (1 << layer);
         cam.cullingMask = bitMask;
         cam.gameObject.layer = layer;
     }

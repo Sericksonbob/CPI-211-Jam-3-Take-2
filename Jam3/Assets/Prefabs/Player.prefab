@@ -2710,7 +2710,7 @@ GameObject:
   - component: {fileID: 1786648127994721306}
   - component: {fileID: 4828645312995260938}
   - component: {fileID: 6959342969363630387}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2725,8 +2725,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926616927562288503}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.1784248, y: 0.000000018928626, z: -0.0000000034324141, w: -0.9839536}
-  m_LocalPosition: {x: 0, y: 1.5, z: -4}
+  m_LocalRotation: {x: -0.12218327, y: -0.000000017077465, z: 0.0000000021023319, w: -0.9925076}
+  m_LocalPosition: {x: 0, y: 1, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2765,13 +2765,13 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 45
+  field of view: 40
   orthographic: 0
   orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 191
+    m_Bits: 127
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3715,7 +3715,7 @@ GameObject:
   - component: {fileID: 4227102671143398846}
   - component: {fileID: 2528717462155769771}
   - component: {fileID: 2502479687232649072}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: CM Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3730,7 +3730,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2405055068071076843}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.12218326, y: -0.000000005063385, z: 6.2333105e-10, w: -0.9925076}
+  m_LocalRotation: {x: -0.12218327, y: -0.000000017077465, z: 0.0000000021023319, w: -0.9925076}
   m_LocalPosition: {x: 0, y: 1, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3759,7 +3759,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 8374518991322869711}
   m_Follow: {fileID: 8374518991322869711}
   m_Lens:
-    FieldOfView: 45
+    FieldOfView: 40
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -8729,6 +8729,23 @@ MonoBehaviour:
     m_ActionId: 93f051de-b98f-4738-a865-d7267991a010
     m_ActionName: Gameplay/Drift[/PowerA NSW wired controller/button8,/Nintendo Wireless
       Gamepad/button6]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2743066704209065528}
+        m_TargetAssemblyTypeName: UseItem, Assembly-CSharp
+        m_MethodName: ItemButton
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 91cc685e-8263-498d-a1e3-2069fd0b5928
+    m_ActionName: Gameplay/Item[/Nintendo Wireless Gamepad1/button5,/PowerA NSW wired
+      controller/button7,/Keyboard/ctrl]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Split Joycon
   m_DefaultActionMap: Gameplay

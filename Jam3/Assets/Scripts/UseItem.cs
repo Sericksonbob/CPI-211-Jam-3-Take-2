@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine;
 
 public class UseItem : MonoBehaviour
@@ -9,16 +10,21 @@ public class UseItem : MonoBehaviour
     public GameObject buzzsaw;
     private float distanceBehind = 2f;
     private Vector3 buzzsawPos;
+    bool pressed;
     // Start is called before the first frame update
     void Start()
     {
         appleSpeed = 15;
     }
+    public void ItemButton(InputAction.CallbackContext ctx)
+    {
+        pressed = ctx.action.triggered && ctx.action.ReadValue<float>() > 0;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.W))
+        if(pressed)
         {
             switch(collider.gameObject.GetComponent<CollectBox>().itemHeld)
             {

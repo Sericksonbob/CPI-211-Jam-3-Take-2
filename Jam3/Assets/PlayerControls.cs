@@ -62,6 +62,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Press(behavior=2)"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Item"",
+                    ""type"": ""Button"",
+                    ""id"": ""91cc685e-8263-498d-a1e3-2069fd0b5928"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -295,6 +304,39 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Drift"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""67d354ac-7668-4d1a-bcd4-a21ad1f12708"",
+                    ""path"": ""<HID::Nintendo Wireless Gamepad>/button5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Split Joycon"",
+                    ""action"": ""Item"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""91d92d61-58fc-4916-a59b-a3a9438ec74e"",
+                    ""path"": ""<HID::PowerA NSW wired controller>/button7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Item"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""385c4a7f-80d3-46a9-a61f-944a3f7dadf8"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""WASD and Mouse"",
+                    ""action"": ""Item"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -356,6 +398,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Gameplay_Brake = m_Gameplay.FindAction("Brake", throwIfNotFound: true);
         m_Gameplay_SteerLeftandRight = m_Gameplay.FindAction("Steer Left and Right", throwIfNotFound: true);
         m_Gameplay_Drift = m_Gameplay.FindAction("Drift", throwIfNotFound: true);
+        m_Gameplay_Item = m_Gameplay.FindAction("Item", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -421,6 +464,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Brake;
     private readonly InputAction m_Gameplay_SteerLeftandRight;
     private readonly InputAction m_Gameplay_Drift;
+    private readonly InputAction m_Gameplay_Item;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -429,6 +473,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Brake => m_Wrapper.m_Gameplay_Brake;
         public InputAction @SteerLeftandRight => m_Wrapper.m_Gameplay_SteerLeftandRight;
         public InputAction @Drift => m_Wrapper.m_Gameplay_Drift;
+        public InputAction @Item => m_Wrapper.m_Gameplay_Item;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -450,6 +495,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Drift.started += instance.OnDrift;
             @Drift.performed += instance.OnDrift;
             @Drift.canceled += instance.OnDrift;
+            @Item.started += instance.OnItem;
+            @Item.performed += instance.OnItem;
+            @Item.canceled += instance.OnItem;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -466,6 +514,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Drift.started -= instance.OnDrift;
             @Drift.performed -= instance.OnDrift;
             @Drift.canceled -= instance.OnDrift;
+            @Item.started -= instance.OnItem;
+            @Item.performed -= instance.OnItem;
+            @Item.canceled -= instance.OnItem;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -516,5 +567,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnBrake(InputAction.CallbackContext context);
         void OnSteerLeftandRight(InputAction.CallbackContext context);
         void OnDrift(InputAction.CallbackContext context);
+        void OnItem(InputAction.CallbackContext context);
     }
 }
