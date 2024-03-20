@@ -366,6 +366,7 @@
 "Assets/MainMenuScripts/MainMenu.cs"
 "Assets/MainMenuScripts/SelectTrackMenu.cs"
 "Assets/PlayerControls.cs"
+"Assets/PlayerManager.cs"
 "Assets/Scripts/BuzzsawCollision.cs"
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/CheckpointLogic.cs"

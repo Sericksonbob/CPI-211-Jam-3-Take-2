@@ -9,6 +9,10 @@ public class ShowPositionUI : MonoBehaviour
     public GameObject positionText;
     public GameObject leaderboard;
     public GameObject playerKart;
+    private void Start()
+    {
+        leaderboard = GameObject.FindObjectOfType<LeaderboardBehavior>().gameObject;
+    }
     // Update is called once per frame
     void Update()
     {

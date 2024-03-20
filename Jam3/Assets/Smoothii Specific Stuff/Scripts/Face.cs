@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 
@@ -37,10 +38,30 @@ public class Face : MonoBehaviour
     public float glassessize, glassesposy;
     public float moustachesize, moustacheposy;
     public string miiname;
+    public bool randomMii;
 
     private void Start()
     {
-        if (miiname != "")
+        if (randomMii)
+        {
+            int amountOfMiis = 0;
+            foreach (string file in Directory.GetFiles(Application.persistentDataPath, "*.smoothii"))
+            {
+                amountOfMiis++;
+            }
+            int chosenMii = Mathf.RoundToInt(Random.Range(0, amountOfMiis));
+            int i = 0;
+            foreach (string file in Directory.GetFiles(Application.persistentDataPath, "*.smoothii"))
+            {
+                if (i == chosenMii)
+                {
+                    Mii newMii = SaveSystem.LoadMiiFromFile(file);
+                    UpdateFace(newMii);
+                }
+                i++;
+            }
+        }
+        else if (miiname != "")
         LoadFace(miiname);
     }
     public void UpdateFace()
