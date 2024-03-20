@@ -72,7 +72,6 @@
     <Compile Include="Assets\Smoothii Specific Stuff\Scripts\Face.cs" />
     <Compile Include="Assets\Smoothii Specific Stuff\Scripts\miiGraphics.cs" />
     <Compile Include="Assets\Scripts\BuzzsawCollision.cs" />
-    <Compile Include="Assets\MainMenuScripts\SelectTrackMenu.cs" />
     <Compile Include="Assets\Smoothii Specific Stuff\Smoothiis\FacialFeatures\Eye\Glasses.cs" />
     <Compile Include="Assets\PlayerControls.cs" />
     <Compile Include="Assets\Smoothii Specific Stuff\Scripts\PartyFace.cs" />
@@ -88,6 +87,7 @@
     <Compile Include="Assets\Scripts\ShowPositionUI.cs" />
     <Compile Include="Assets\MainMenuScripts\MainMenu.cs" />
     <Compile Include="Assets\Smoothii Specific Stuff\Scripts\PartySaveSystem.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\Smoothii Specific Stuff\Scripts\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\ItemBoxBehavior.cs" />
     <Compile Include="Assets\Smoothii Specific Stuff\Smoothiis\FacialFeatures\Eye\Beard.cs" />

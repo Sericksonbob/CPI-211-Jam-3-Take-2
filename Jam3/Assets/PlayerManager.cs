@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     public Camera cam;
     public GameObject virtualCam;
+    public Transform characterGFX;
 
     public void Setup()
     {
@@ -27,5 +28,18 @@ public class PlayerManager : MonoBehaviour
             | (1 << layer);
         cam.cullingMask = bitMask;
         cam.gameObject.layer = layer;
+    }
+    public void updateCharacter(int charIndex)
+    {
+        for (int i = 0; i < characterGFX.childCount; i++){
+            if (i == charIndex)
+            {
+                characterGFX.GetChild(i).gameObject.SetActive(true);
+            }
+            else
+            {
+                characterGFX.GetChild(i).gameObject.SetActive(false);
+            }
+        }
     }
 }

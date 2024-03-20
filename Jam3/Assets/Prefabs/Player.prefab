@@ -2710,7 +2710,7 @@ GameObject:
   - component: {fileID: 1786648127994721306}
   - component: {fileID: 4828645312995260938}
   - component: {fileID: 6959342969363630387}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2725,7 +2725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926616927562288503}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.12218327, y: -0.000000017077465, z: 0.0000000021023319, w: -0.9925076}
+  m_LocalRotation: {x: -0.12218327, y: 0.000000017077463, z: -0.0000000021023316, w: -0.9925076}
   m_LocalPosition: {x: 0, y: 1, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2771,7 +2771,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 127
+    m_Bits: 191
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3182,7 +3182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2798657396492054725
 Transform:
   m_ObjectHideFlags: 0
@@ -3248,7 +3248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &767520073805327315
 Transform:
   m_ObjectHideFlags: 0
@@ -3715,7 +3715,7 @@ GameObject:
   - component: {fileID: 4227102671143398846}
   - component: {fileID: 2528717462155769771}
   - component: {fileID: 2502479687232649072}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CM Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3730,7 +3730,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2405055068071076843}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.12218327, y: -0.000000017077465, z: 0.0000000021023319, w: -0.9925076}
+  m_LocalRotation: {x: -0.12218327, y: 0.000000017077463, z: -0.0000000021023316, w: -0.9925076}
   m_LocalPosition: {x: 0, y: 1, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4062,6 +4062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1786648127994721306}
   virtualCam: {fileID: 2405055068071076843}
+  characterGFX: {fileID: 1792610366109317149}
 --- !u!1 &2564300196066641674
 GameObject:
   m_ObjectHideFlags: 0
